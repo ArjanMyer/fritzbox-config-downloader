@@ -102,7 +102,7 @@ done
 curlCmd="curl -ksm 20"
 # Use HTTPS and HTTP auth for remote access
 if [ "${remoteAccess}" = "1" ]; then
-	if [[ $host != https://* ]]; then
+	if [ $host != https://* ]; then
 		host="https://${host}"
 	fi
 	# For the older remote access we need HTTP auth
